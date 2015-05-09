@@ -28,6 +28,7 @@
 #include "fw_version_check.h"
 
 #define DEVICE_NAME	"/sys/kernel/fw_update/fw_info/fw_version"
+// "$FIP" inversed
 #define FIP_PATTERN	0x50494624
 #define SCU_IPC_VERSION_LEN_LONG 32
 #define READ_SZ 256
