@@ -2,13 +2,13 @@ IFWI Version Dump
 =================
   This is tool is meant for checking version of Intel FirmWare Interface(IFWI) images.
 
-##### `fw_version_check.*` and `check_perform.c(recovery_updater.cpp)` is taken from AOSP fugu device tree (modified).
+###### fw_version_check.* and check_perform.c(recovery_updater.cpp modified) is taken from AOSP fugu device tree.
 
-  Build: as simple as `make`
+  *Build*: as simple as `make`
 
-  Usage: `ifwi_ver_dump <path_to_ifwi_image>`
+  *Usage*: `ifwi_ver_dump <path_to_ifwi_image>`
 
-  Example:
+  *Example*:
 > $ ./ifwi_ver_dump ifwi_ann_a0-mofd_v1-ze551ml.bin
 
 > Image FW versions:
