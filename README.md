@@ -9,7 +9,7 @@ IFWI Version Dump
   Usage: `ifwi_ver_dump <path_to_ifwi_image>`
 
   Example:
-> $ ./ifwi_ver_dump ./ifwi_ann_a0-mofd_v1-ze551ml.bin
+> $ ./ifwi_ver_dump ifwi_ann_a0-mofd_v1-ze551ml.bin
 
 > Image FW versions:
 
