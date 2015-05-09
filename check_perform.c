@@ -19,14 +19,14 @@
 
 static void dump_fw_versions(struct firmware_versions *v)
 {
-    fprintf(stderr, "Image FW versions:\n");
-    fprintf(stderr, "	   ifwi: %04X.%04X\n", v->ifwi.major, v->ifwi.minor);
-    fprintf(stderr, "---- components ----\n");
-    fprintf(stderr, "	    scu: %04X.%04X\n", v->scu.major, v->scu.minor);
-    fprintf(stderr, "      hooks/oem: %04X.%04X\n", v->valhooks.major, v->valhooks.minor);
-    fprintf(stderr, "	   ia32: %04X.%04X\n", v->ia32.major, v->ia32.minor);
-    fprintf(stderr, "	 chaabi: %04X.%04X\n", v->chaabi.major, v->chaabi.minor);
-    fprintf(stderr, "	    mIA: %04X.%04X\n", v->mia.major, v->mia.minor);
+    fprintf(stdout, "Image FW versions:\n");
+    fprintf(stdout, "	   ifwi: %04X.%04X\n", v->ifwi.major, v->ifwi.minor);
+    fprintf(stdout, "---- components ----\n");
+    fprintf(stdout, "	    scu: %04X.%04X\n", v->scu.major, v->scu.minor);
+    fprintf(stdout, "      hooks/oem: %04X.%04X\n", v->valhooks.major, v->valhooks.minor);
+    fprintf(stdout, "	   ia32: %04X.%04X\n", v->ia32.major, v->ia32.minor);
+    fprintf(stdout, "	 chaabi: %04X.%04X\n", v->chaabi.major, v->chaabi.minor);
+    fprintf(stdout, "	    mIA: %04X.%04X\n", v->mia.major, v->mia.minor);
 }
 
 int check_ifwi_file(void *data, size_t size)
@@ -34,7 +34,7 @@ int check_ifwi_file(void *data, size_t size)
 	struct firmware_versions img_fw_rev;
 
 	if (get_image_fw_rev(data, size, &img_fw_rev)) {
-		fprintf(stderr, "Coudn't extract FW version data from image\n");
+		fprintf(stderr, "Couldn't extract FW version data from image\n");
 		return -1;
 	}
 
