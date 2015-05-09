@@ -34,23 +34,9 @@ struct firmware_versions {
 	struct fw_version mia;
 };
 
-/* Query the SCU for current firmware versions and populate
- * the fields in v. Returns nonzero on error */
-int get_current_fw_rev(struct firmware_versions *v);
-
 /* Assuming data points to a blob of memory containing an IFWI
  * firmware image, inpsect the FIP header inside it and
  * populate the fields in v. Returns nonzero on error */
 int get_image_fw_rev(void *data, unsigned sz, struct firmware_versions *v);
-
-/* Compare versions v1 and v2, and return -1, 1, or 0 if v1 is less than,
- * greater than, or equal to v2, respectively */
-int fw_vercmp(struct firmware_versions *v1, struct firmware_versions *v2);
-
-/* Crack ifwi firmware file */
-int crack_update_fw(const char *fw_file, struct fw_version *ifwi_version);
-
-/* Crack ifwi firmware file to get the PTI Field. */
-int crack_update_fw_pti_field(const char *fw_file, uint8_t * pti_field);
 
 #endif
